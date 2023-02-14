@@ -1,4 +1,5 @@
 import * as React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router } from "@reach/router"
 import Layout from "../components/Layout"
 import Home from "./home"
