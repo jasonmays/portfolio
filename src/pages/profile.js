@@ -1,12 +1,15 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import Container from 'react-bootstrap/Container';
 
 const Profile = () => {
   return (
     <Layout>
-      <p>
-        Profile Page
-      </p>
+      <Container>
+        <p>
+          Profile Page
+        </p>
+      </Container>
     </Layout>
   )
 }

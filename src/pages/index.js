@@ -1,5 +1,5 @@
 import * as React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../theme/theme.scss';
 import { Router } from "@reach/router"
 import Layout from "../components/Layout"
 import Home from "./home"
@@ -20,4 +20,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Router</title>
+export const Head = () => <title>Home</title>

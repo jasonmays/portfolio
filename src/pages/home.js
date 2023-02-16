@@ -1,13 +1,15 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import Container from 'react-bootstrap/Container';
 
 const Home = () => {
   return (
-    <main>
-      <p>
-        Home
-      </p>
-    </main>
+    <>
+      <Container>
+        <p>
+          Home
+        </p>
+      </Container>
+    </>
   )
 }
 
