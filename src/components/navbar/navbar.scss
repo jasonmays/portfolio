@@ -3,7 +3,8 @@
 .menuBrand {
     color: $white;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         color: $white;
     }
 }
@@ -11,7 +12,26 @@
 .menuLink {
     color: $white;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         color: $info;
+    }
+
+    @include media-breakpoint-down(lg) {
+        color: $primary;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-close {
+    &:focus {
+        box-shadow: none;
     }
 }
