@@ -1,12 +1,13 @@
 import * as React from "react"
+import Container from 'react-bootstrap/Container';
 import Navbar from "./navbar/navbar"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageInfo }) => {
   return (
-    <>
-      <Navbar />
+    <Container>
+      <Navbar pageInfo={pageInfo} />
       {children}
-    </>
+    </Container>
   )
 }
 

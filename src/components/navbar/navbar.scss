@@ -1,25 +1,11 @@
 @import '../../theme/theme.scss';
 
-.menuBrand {
-    color: $white;
-    text-decoration: none;
-
-    &:hover {
-        color: $white;
-    }
-}
-
 .menuLink {
-    color: $white;
     text-decoration: none;
 
-    &:hover {
-        color: $info;
-    }
-
-    @include media-breakpoint-down(lg) {
-        color: $primary;
-    }
+    /*@include media-breakpoint-down(lg) {
+        color: $gray-600;
+    }*/
 }
 
 .navbar-toggler {

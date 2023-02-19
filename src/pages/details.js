@@ -1,15 +1,12 @@
 import * as React from "react"
 import Layout from "../components/Layout"
-import Container from 'react-bootstrap/Container';
 
 const Details = () => {
   return (
-    <Layout>
-      <Container>
+    <Layout pageInfo={{ pageName: "details" }}>
         <p>
           Details Page
         </p>
-      </Container>
     </Layout>
   )
 }
