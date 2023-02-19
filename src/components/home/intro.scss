@@ -13,9 +13,14 @@
 }
 
 .socialsIcon {
-    font-size: 18px;
+    font-size: 20px;
     text-align: right;
     padding-right: 72px;
+    color: $gray-800;
+
+    &:hover{
+        color: $black;
+    }
 
     @include media-breakpoint-down(lg) {
         padding: 20px 20px 0px;
@@ -38,6 +43,27 @@
     }
 }
 
+.line {
+    position: relative;
+    display: block;
+    top: 50%;
+    right: -84%;
+    width: 70px;
+    border-top: 1px solid currentColor;
+    z-index: 2;
+}
+
+.shape {
+    position: relative;
+    top: -35%;
+    right: 0;
+    bottom: 0px;
+    left: 13%;
+    pointer-events: none;
+    display: initial;
+}
+
 .bannerImage {
     background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
 }
+

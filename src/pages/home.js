@@ -1,11 +1,11 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import Banner from "../components/home/banner";
+import Intro from "../components/home/intro";
 
 const Home = () => {
   return (
     <Layout pageInfo={{ pageName: "home" }}>
-      <Banner />
+      <Intro />
     </Layout>
   )
 }

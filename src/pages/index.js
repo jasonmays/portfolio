@@ -6,6 +6,7 @@ import Details from "./details"
 import Profile from "./profile"
 
 const IndexPage = () => {
+  
   return (
     <Router>
       <Home path="/" />
