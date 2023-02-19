@@ -6,10 +6,10 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from '../../images/logo.svg';
 import './navbar.scss';
 
-const OffcanvasExample = ({ pageInfo }) => {
+const MainMenu = ({ pageInfo }) => {
   return (
     <Navbar key='lg' bg="white" expand='lg' className="mb-3 mt-3" variant="light">
-      <Link to="/" className="menuLink">
+      <Link to="/" className="link">
         <Navbar.Brand as="span">
           <img
             src={logo}
@@ -25,20 +25,29 @@ const OffcanvasExample = ({ pageInfo }) => {
         id={`offcanvasNavbar-expand-lg`}
         aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
         placement="end"
+        className="px-5 fullWidthSm"
       >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-            Jason Mays
-          </Offcanvas.Title>
+        <Offcanvas.Header className="mt-2" closeButton>
+          <Link to="/" className="link">
+            <Offcanvas.Title as="span" id={`offcanvasNavbarLabel-expand-lg`}>
+              <img
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="JM Logo"
+              />
+            </Offcanvas.Title>
+          </Link>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="justify-content-end flex-grow-1 pe-3" activeKey={pageInfo && pageInfo.pageName}>
-            <Link className="menuLink" to="/details" >
+            <Link className="link" to="/details" >
               <Nav.Link as="span" eventKey="details">
                 Details
               </Nav.Link>
             </Link>
-            <Link className="menuLink" to="/profile" >
+            <Link className="link" to="/profile" >
               <Nav.Link as="span" eventKey="profile">Profile</Nav.Link>
             </Link>
           </Nav>
@@ -48,4 +57,4 @@ const OffcanvasExample = ({ pageInfo }) => {
   );
 }
 
-export default OffcanvasExample;
+export default MainMenu;

@@ -1,23 +1,37 @@
 @import '../../theme/theme.scss';
 
-.menuLink {
+.link {
     text-decoration: none;
+}
 
-    /*@include media-breakpoint-down(lg) {
-        color: $gray-600;
-    }*/
+.nav-link {
+    color: $gray-600;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.active {
+    color: $black !important;
+}
+
+.fullWidthSm {
+    @include media-breakpoint-down(sm) {
+        width: 100% !important;
+    }
 }
 
 .navbar-toggler {
-    border: none;
+    border: none !important;
 
     &:focus {
-        box-shadow: none;
+        box-shadow: none !important;
     }
 }
 
 .btn-close {
     &:focus {
-        box-shadow: none;
+        box-shadow: none !important;
     }
 }
