@@ -50,6 +50,9 @@ const MainMenu = ({ pageInfo }) => {
             <Link className="link" to="/profile" >
               <Nav.Link as="span" eventKey="profile">Profile</Nav.Link>
             </Link>
+            <Link className="link" to="/projects" >
+              <Nav.Link as="span" eventKey="projects">Projects</Nav.Link>
+            </Link>
           </Nav>
         </Offcanvas.Body>
       </Navbar.Offcanvas>

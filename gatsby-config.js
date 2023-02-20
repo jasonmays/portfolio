@@ -4,6 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jason Mays`,
+    description: 'Personal Portfolio for Jason Mays',
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-google-gtag", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
@@ -11,7 +12,7 @@ module.exports = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
+  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", `gatsby-transformer-remark`, {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -25,5 +26,12 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "projects",
+      "path": "./src/projects/"
+    },
+    __key: "projects"
   }]
 };
