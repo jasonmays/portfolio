@@ -11,8 +11,9 @@ export default function BlogPost({ data }) {
                 <h1>{project.frontmatter.title}</h1>
                 <small>{project.frontmatter.date}</small>
                 <div dangerouslySetInnerHTML={{ __html: project.html }} />
+                <p>{project.frontmatter.type}</p>
             </div>
-            projects.js
+            projects2.js
         </Layout>
     )
 }
@@ -23,6 +24,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        type
       }
     }
   }

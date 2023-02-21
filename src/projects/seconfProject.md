@@ -2,6 +2,8 @@
 title: My Second Project
 author: Jason Mays
 date: 2023-02-19
+type: Mobile
+template: project2.js
 ---
 
 ## Introduction to my blog post

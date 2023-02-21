@@ -2,7 +2,7 @@ import * as React from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import headshot from '../../images/Headshot.png';
+import headshot from '../../../images/Headshot.png';
 import './intro.scss';
 
 const Intro = () => {
