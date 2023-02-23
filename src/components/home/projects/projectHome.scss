@@ -1,0 +1,15 @@
+@import '../../../theme/theme.scss';
+
+.nav-link {
+    color: $gray-600;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.col-md-6 {
+    @include media-breakpoint-up(md) {
+        padding: 0 !important;
+    }
+}

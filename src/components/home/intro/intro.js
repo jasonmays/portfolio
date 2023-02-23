@@ -2,13 +2,13 @@ import * as React from "react";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import headshot from '../../../images/Headshot.png';
+import headshot from '../../../images/Animoji.png';
 import './intro.scss';
 
 const Intro = () => {
     return (
         <section>
-            <Row className="mt-5 pt-lg-5">
+            <Row className="my-5 py-lg-5">
                 <Col lg={{ span: 4, order: 3 }} className="d-flex flex-column justify-content-center align-items-center position-relative">
                     <img
                         src={headshot}
