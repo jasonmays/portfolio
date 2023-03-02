@@ -1,11 +1,15 @@
 @import '../../../theme/theme.scss';
 
 .nav-link {
-    color: $gray-600;
+    color: $gray-600 !important;
 
     &:hover {
-        color: $black;
+        color: $black !important;
     }
+}
+
+.active{
+    color: $black !important;
 }
 
 .col-md-6 {

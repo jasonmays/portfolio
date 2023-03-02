@@ -9,31 +9,31 @@ const Intro = () => {
     return (
         <section>
             <Row className="my-5 py-lg-5">
-                <Col lg={{ span: 4, order: 3 }} className="d-flex flex-column justify-content-center align-items-center position-relative">
+                <Col lg={{ span: 4, order: 3 }} className="d-flex flex-column justify-content-center align-items-center position-relative fadeIn">
                     <img
                         src={headshot}
                         width="200"
                         height="200"
-                        className="d-inline-block rounded-circle bannerImage position-relative"
+                        className="d-inline-block rounded-circle bannerImage position-relative fadeIn"
                         alt="JM Logo"
                     />
                 </Col>
-                <Col lg={{ span: 2, order: 4 }} className="d-flex">
+                <Col lg={{ span: 2, order: 4 }} className="d-flex fadeIn">
                     <Stack gap={2} className="justify-content-center">
-                        <a role="button" href="mailto: jmays340@gmail.com" aria-label="Email" className="socialsIcon">
+                        <a role="button" href="mailto: jmays340@gmail.com" aria-label="Email" className="socialsIcon fadeIn">
                             <i className="bi bi-envelope"></i>
                         </a>
-                        <a role="button" href="https://www.linkedin.com/in/jason-mays/" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="socialsIcon">
+                        <a role="button" href="https://www.linkedin.com/in/jason-mays/" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="socialsIcon fadeIn">
                             <i className="bi bi-linkedin"></i>
                         </a>
-                        <a role="button" href="https://github.com/jasonmays" aria-label="Github" target="_blank" rel="noreferrer" className="socialsIcon">
+                        <a role="button" href="https://github.com/jasonmays" aria-label="Github" target="_blank" rel="noreferrer" className="socialsIcon fadeIn">
                             <i className="bi bi-github"></i>
                         </a>
                     </Stack>
                 </Col>
                 <Col lg={{ span: 5, order: 1 }} className="align-middle pt-5 pt-lg-3 bannerText">
-                    <p>Jason Mays</p>
-                    <h1>I'm a Web Developer based in Philly</h1>
+                    <p className="fadeIn">Jason Mays</p>
+                    <h1 className="fadeIn">I'm a Web Developer based in Philly</h1>
                 </Col>
                 <Col lg={{ span: 1, order: 2 }} className="d-none d-lg-block"></Col>
             </Row>

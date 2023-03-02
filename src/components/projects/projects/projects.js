@@ -5,8 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ProjectNav from '../../projectNav/projectNav';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import './projectHome.scss';
+import './projects.scss';
 
 const Projects = () => {
     const [filter, setFilter] = useState("all");
@@ -22,7 +21,7 @@ const Projects = () => {
               type
               featuredImage {
                 childImageSharp {
-                  gatsbyImageData(width: 800)
+                  gatsbyImageData(width: 1200)
                 }
               }
             }
@@ -35,46 +34,44 @@ const Projects = () => {
   `)
 
     return (
-        <section className="mt-5 pt-5 border-top border-3 border-black">
+        <section className="mt-5">
             <ProjectNav setFilter={setFilter} />
             <Row>
                 {data.allMarkdownRemark.nodes.map(project => (
                     <>
                         {filter === project.frontmatter.type &&
                             <>
-                                <Col md={6}>
+                                <Col md={6} className="project">
+                                    <GatsbyImage image={getImage(project.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)} />
                                     <Link to={`/${project.fields.slug}`}>
-                                        <GatsbyImage image={getImage(project.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)} />
+                                        <div className="overlayContainer">
+                                            <div className="mt-4 pb-3 text-center overlay">
+                                                <h3 >{project.frontmatter.title}</h3>
+                                                <p>{project.frontmatter.type}</p>
+                                            </div>
+                                        </div>
                                     </Link>
-                                    <div className="mt-4 mb-5 pb-3 text-center">
-                                        <h3 >{project.frontmatter.title}</h3>
-                                        <p>{project.frontmatter.type}</p>
-                                    </div>
-
                                 </Col>
                             </>
                         }
 
                         {filter === "all" &&
                             <>
-                                <Col md={6}>
+                                <Col md={6} className="project">
+                                    <GatsbyImage image={getImage(project.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)} />
                                     <Link to={`/${project.fields.slug}`}>
-                                        <GatsbyImage image={getImage(project.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)} />
+                                        <div className="overlayContainer">
+                                            <div className="mt-4 pb-3 text-center overlay">
+                                                <h3 >{project.frontmatter.title}</h3>
+                                                <p>{project.frontmatter.type}</p>
+                                            </div>
+                                        </div>
                                     </Link>
-                                    <div className="mt-4 mb-5 pb-3 text-center">
-                                        <h3>{project.frontmatter.title}</h3>
-                                        <p>{project.frontmatter.type}</p>
-                                    </div>
                                 </Col>
                             </>
                         }
                     </>
                 ))}
-                <div className="d-flex justify-content-center mb-5">
-                    <Link to="/projects">
-                    <Button className="rounded-circle p-4" variant="outline-primary" size="lg">More</Button>
-                    </Link>
-                </div>
             </Row>
         </section>
     );
