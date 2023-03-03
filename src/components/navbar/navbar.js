@@ -42,13 +42,8 @@ const MainMenu = ({ pageInfo }) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="justify-content-end flex-grow-1 pe-3" activeKey={pageInfo && pageInfo.pageName}>
-            <Link className="link" to="/details" >
-              <Nav.Link as="span" eventKey="details">
-                Details
-              </Nav.Link>
-            </Link>
-            <Link className="link" to="/profile" >
-              <Nav.Link as="span" eventKey="profile">Profile</Nav.Link>
+            <Link className="link" to="/about" >
+              <Nav.Link as="span" eventKey="about">About Me</Nav.Link>
             </Link>
             <Link className="link" to="/projects" >
               <Nav.Link as="span" eventKey="projects">Projects</Nav.Link>

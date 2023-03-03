@@ -1,0 +1,35 @@
+@import '../../../theme/theme.scss';
+
+.socialsContainer {
+    @include media-breakpoint-down(lg) {
+        justify-content: center !important;
+    }
+}
+
+.vstack {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-self: stretch;
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.socialsIcon {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 72px;
+    color: $gray-800;
+
+    &:hover {
+        color: $black;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 20px 20px 0px;
+    }
+}
