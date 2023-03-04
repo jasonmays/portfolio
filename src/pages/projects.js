@@ -1,11 +1,11 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout";
 import Intro from "../components/projects/intro/projectsIntro";
 import Projects from "../components/projects/projects/projects";
 
 export default function Project({ data }) {
-  const { projects } = data.project
+  //const { projects } = data.project
 
   return (
     <>
